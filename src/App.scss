@@ -24,4 +24,29 @@
     justify-content: center;
     grid-gap: 5px;
   }
+
+  h1, h2 {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+  div {
+    font-size: clamp(14px, 1.6vw, 17px);
+  }
+
+  @media screen and (max-width: 500px) {
+    overflow: auto;
+    max-height: 90%;
+    width: 90%;
+
+    > div {
+      width: 100%;
+
+      &:first-child {
+        margin-top: 96px;
+      }
+
+      .p-inputnumber, .p-calendar {
+        width: 100%;
+      }
+    }
+  }
 }
